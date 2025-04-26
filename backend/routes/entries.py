@@ -11,7 +11,7 @@ from models.entry import (
     LectureResponse,
 )
 from database import lectures_collection
-from services.gemini import generate_summary, generate_questions
+from services.gemini import process_audio
 
 router = APIRouter()
 
@@ -47,6 +47,7 @@ async def update_info(
             raise HTTPException(status_code=400, detail="Audio file must be in WAV format")
         audio_content = await audio.read()
         print("Audio content: ", audio_content)
+        print(process_audio(audio_content))
         # In a real implementation, you'd want to store this in a proper storage service
         update_data["audio_data"] = audio_content
     
@@ -75,8 +76,8 @@ async def request_summary(snap_user_id: str, lecture_id: str):
     
     # In a real implementation, you'd process the actual audio/transcript
     # Here we're just using a placeholder
-    summary = await generate_summary("Sample transcript")
-    return LectureSummary(text=summary, slides=[])
+    # summary = await generate_summary("Sample transcript")
+    return LectureSummary(text="summary", slides=[])
 
 @router.get("/requestQuestions")
 async def request_questions(snap_user_id: str, lecture_id: str):
@@ -89,10 +90,10 @@ async def request_questions(snap_user_id: str, lecture_id: str):
         raise HTTPException(status_code=404, detail="Lecture not found")
     
     # In a real implementation, you'd process the actual lecture content
-    questions = await generate_questions("Sample transcript")
+    # questions = await generate_questions("Sample transcript")
     return [
         Question(question=q, pre_searched_answer=a)
-        for q, a in questions
+        for q, a in []
     ]
 
 @router.post("/endLecture")
