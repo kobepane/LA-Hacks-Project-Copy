@@ -1,10 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 669
+    size: 682
     values:
-      - 3D Text Layout
-      - 9 Slicing Material
       - Audio Analyzer.lspkg
       - Audio Analyzer.lspkg/Audio Analyzer Resources
       - Audio Analyzer.lspkg/Audio Analyzer Resources/Audio Tracks
@@ -45,13 +43,7 @@ CollapsedEntities:
       - Hint - Draw on the Wall/Custom Hint Resources/Scripts
       - Hint - Draw on the Wall/Custom Hint Resources/Scripts/CustomHint.js
       - Hint - Draw on the Wall/Hint - Draw on the Wall.prefab
-      - Hint - Swipe Up
-      - Hint - Tap (With Feedback)
-      - Hint - Try on Hand (Watches Tracking)
       - Microphone Audio.micaudio
-      - Object Layout
-      - Object Layout/.hidden
-      - Object Layout/Object Layout Resources
       - Remote Service Module.remoteServiceModule
       - Render Target.renderTarget
       - Scene.scene
@@ -620,7 +612,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
-      - Speech Recognition
       - Speech Recognition.lspkg
       - Speech Recognition.lspkg/Fonts
       - Speech Recognition.lspkg/Fonts/Urbanist-VariableFont_wght.ttf
@@ -649,6 +640,28 @@ CollapsedEntities:
       - Speech Recognition.lspkg/package.native
       - VoiceML Module.voiceMLModule
       - World Object Controller
+      - World Object Controller 2/Materials
+      - World Object Controller 2/Materials/graph_matte_shadow.mat
+      - World Object Controller 2/Materials/ground_grid.mat
+      - World Object Controller 2/Materials/sphere_diffuse.mat
+      - World Object Controller 2/Materials/touch_collision.mat
+      - World Object Controller 2/Meshes
+      - World Object Controller 2/Meshes/Sphere.mesh
+      - World Object Controller 2/Meshes/plane.mesh
+      - World Object Controller 2/Meshes/touch_collision_cube.mesh
+      - World Object Controller 2/Scripts
+      - World Object Controller 2/Scripts/WorldObjectController.js
+      - World Object Controller 2/Shaders
+      - World Object Controller 2/Shaders/graph_matte_shadow.ss_graph
+      - World Object Controller 2/Shaders/ground_grid.ss_graph
+      - World Object Controller 2/Shaders/touch_collision.ss_graph
+      - World Object Controller 2/Shaders/uber_diffuse.ss_graph
+      - World Object Controller 2/Textures
+      - World Object Controller 2/Textures/Base.png
+      - World Object Controller 2/Textures/MaterialParams.png
+      - World Object Controller 2/Textures/Normal.png
+      - World Object Controller 2/Textures/ground_grid.png
+      - World Object Controller 2/World Object Controller__ADD_TO_SCENE.prefab
       - World Object Controller/Materials
       - World Object Controller/Materials/graph_matte_shadow.mat
       - World Object Controller/Materials/ground_grid.mat
