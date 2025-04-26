@@ -163,12 +163,18 @@
     - Port_Input0_N085:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N090:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
     - Port_Input1_N014:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
     - Port_Input1_N021:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N024:
+        typeIdx: 1
+        value: 0.000000
     - Port_Input1_N034:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -244,12 +250,15 @@
     - Port_Input2_N021:
         typeIdx: 5
         value: {x: 0.500008, y: 0.500008, z: 0.500008, w: 0.500008}
+    - Port_Input2_N024:
+        typeIdx: 1
+        value: 1.000000
     - Port_Input_N074:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
     - Port_Input_N086:
-        typeIdx: 1
-        value: 0.000000
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
     - Port_Input_N087:
         typeIdx: 1
         value: 0.000000
@@ -358,6 +367,9 @@
     - Port_Value4_N200:
         typeIdx: 1
         value: 0.000000
+    - Port_Value_N022:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.000000}
     - Port_Value_N035:
         typeIdx: 1
         value: 0.500000
@@ -444,9 +456,6 @@
     Port_Input1_N009:
       typeIdx: 3
       value: {x: 1.000000, y: 1.000000}
-    Port_Input1_N024:
-      typeIdx: 1
-      value: 0.000000
     Port_Input1_N053:
       typeIdx: 1
       value: 0.500000
@@ -456,9 +465,6 @@
     Port_Input2_N009:
       typeIdx: 3
       value: {x: -0.500000, y: -0.500000}
-    Port_Input2_N024:
-      typeIdx: 1
-      value: 1.000000
     Port_Input2_N053:
       typeIdx: 1
       value: 0.500000
@@ -507,9 +513,6 @@
     Port_Value4_N018:
       typeIdx: 1
       value: 1.000000
-    Port_Value_N022:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.000000}
     PreviewEnabled:
       typeIdx: 0
       value: 0

@@ -5,7 +5,7 @@ import { SIK } from "./SpectaclesInteractionKit/SIK";
 @component
 export class HandButton extends BaseScriptComponent {
   // Inputs to the script component
-  @input private chirality: boolean;  // False -> Left : True -> Right
+  @input private chirality: boolean; // False -> Left : True -> Right
   @input private button: PinchButton;
   @input private txobj: SceneObject;
   @input private camera: Camera;
@@ -35,17 +35,19 @@ export class HandButton extends BaseScriptComponent {
       // Copy TRS of the scene object to the world coordinates of the hand
       transform.setWorldRotation(handTransform.getWorldRotation());
       transform.setWorldPosition(
-        this.hand
-          .getPalmCenter()
-          .add(handTransform.back.uniformScale(5))
-          //.add(handTransform.left.uniformScale(3))
+        this.hand.getPalmCenter().add(handTransform.back.uniformScale(4))
+        //.add(handTransform.left.uniformScale(3))
       );
 
       // Check if the back of the hand is facing the viewpoint
-      const looking = handTransform.forward.dot(this.camera.getSceneObject().getTransform().forward);
+      const looking = handTransform.back.dot(
+        this.camera.getSceneObject().getTransform().forward
+      );
 
-      if (looking < 0.2){
-        print("LOOKING AWAY");
+      if (looking < 0.3) {
+        this.button.sceneObject.enabled = false;
+      } else {
+        this.button.sceneObject.enabled = true;
       }
     }
   }

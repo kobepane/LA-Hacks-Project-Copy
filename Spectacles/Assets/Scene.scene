@@ -10417,7 +10417,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 180.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -14882,7 +14882,7 @@
       meshStateHoverMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       meshStateIdleMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       persistentPinchedState: false
-      defaultIcon: !<reference.Texture> 29b94a3a-7c51-4970-b47b-3d97d7d099f0
+      defaultIcon: !<reference.Texture> acc12a9d-1d53-455b-80f8-54b1dd72c201
       onIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
@@ -20394,7 +20394,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
