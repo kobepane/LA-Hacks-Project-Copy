@@ -3,15 +3,15 @@ from typing import Optional
 import uuid
 from datetime import datetime
 
-from ..models.entry import (
+from models.entry import (
     LectureBase,
     LectureUpdate,
     LectureSummary,
     Question,
     LectureResponse,
 )
-from ..database import lectures_collection
-from ..services.gemini import generate_summary, generate_questions
+from database import lectures_collection
+from services.gemini import generate_summary, generate_questions
 
 router = APIRouter()
 
