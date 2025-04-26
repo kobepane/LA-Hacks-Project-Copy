@@ -29,7 +29,7 @@ async def start_lecture(snap_user_id: str):
 async def update_info(
     snap_user_id: str,
     lecture_id: str,
-    audio: Optional[UploadFile] = File(None),
+    audio: Optional[UploadFile] = File(None, description="Audio file in WAV format"),
     image: Optional[UploadFile] = File(None)
 ):
     lecture = await lectures_collection.find_one({
@@ -43,7 +43,10 @@ async def update_info(
     
     update_data = {}
     if audio:
+        if not audio.filename.lower().endswith('.wav'):
+            raise HTTPException(status_code=400, detail="Audio file must be in WAV format")
         audio_content = await audio.read()
+        print("Audio content: ", audio_content)
         # In a real implementation, you'd want to store this in a proper storage service
         update_data["audio_data"] = audio_content
     
