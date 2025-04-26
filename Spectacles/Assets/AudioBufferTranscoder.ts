@@ -3,7 +3,7 @@ export class AudioBufferTranscoder extends BaseScriptComponent {
   @input private audioTrack: AudioTrackAsset;
   @input private sampleRate: number = 44100;
 
-  onAwake() {
+  /*onAwake() {
     var control = this.audioTrack.control;
     if (control.isOfType("Provider.MicrophoneAudioProvider")) {
       (control as MicrophoneAudioProvider).start();
@@ -33,5 +33,5 @@ export class AudioBufferTranscoder extends BaseScriptComponent {
         }
       }
     });
-  }
+  }*/
 }

@@ -33,6 +33,7 @@
   ScriptAsset: !<reference> 00a8cb41-3b7c-4aa9-8429-49aa090e1d48
   ScriptInputsDefault:
     chirality: true
+    camera: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -40,6 +41,7 @@
       chirality: false
       button: !<MappingBased.PinchButton> 21cf0685-3ad6-4066-b2de-ba0e1a5b7384
       txobj: !<reference.SceneObject> 487d2d6d-956c-45c9-86b2-fa560695615e
+      camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}

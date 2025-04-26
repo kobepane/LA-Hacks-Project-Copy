@@ -8,6 +8,7 @@ export class HandButton extends BaseScriptComponent {
   @input private chirality: boolean;  // False -> Left : True -> Right
   @input private button: PinchButton;
   @input private txobj: SceneObject;
+  @input private camera: Camera;
 
   // Private internal class variables
   private leftHand: TrackedHand = SIK.HandInputData.getHand("left");
@@ -37,8 +38,15 @@ export class HandButton extends BaseScriptComponent {
         this.hand
           .getPalmCenter()
           .add(handTransform.back.uniformScale(5))
-          .add(handTransform.left.uniformScale(3))
+          //.add(handTransform.left.uniformScale(3))
       );
+
+      // Check if the back of the hand is facing the viewpoint
+      const looking = handTransform.forward.dot(this.camera.getSceneObject().getTransform().forward);
+
+      if (looking < 0.2){
+        print("LOOKING AWAY");
+      }
     }
   }
 

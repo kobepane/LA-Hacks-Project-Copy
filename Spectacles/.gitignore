@@ -11,7 +11,7 @@ BackUp/**
 Workspaces/**
 .vscode/**
 jsconfig.json
-=.DS_Store
+.DS_Store
 *.lock
 
 # Shipped by Lens Studio

@@ -27,6 +27,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     button: false
+    camera: false
     chirality: false
     txobj: false
   ScriptTypesHidden:
@@ -36,6 +37,7 @@
     - chirality: false
       button: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
       txobj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -43,3 +45,4 @@
     - // @input bool chirality
     - // @input PinchButton button
     - // @input SceneObject txobj
+    - // @input Component.Camera camera
