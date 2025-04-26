@@ -26,17 +26,15 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    audioTrack: false
-    sampleRate: false
+    {}
   ScriptTypesHidden:
     {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - audioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
-      sampleRate: !<float> 44100.000000
+    -
+      {}
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Asset.AudioTrackAsset audioTrack
-    - // @input float sampleRate = 44100
+    []
