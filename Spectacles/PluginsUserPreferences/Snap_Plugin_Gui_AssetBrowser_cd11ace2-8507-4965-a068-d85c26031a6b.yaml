@@ -56,7 +56,7 @@ CollapsedEntities:
       - Render Target.renderTarget
       - Scene.scene
       - Script.js
-      - SpectaclesInteractionKit
+      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
@@ -532,7 +532,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Examples/RocketWorkshop/VFX/Rocket Sparks/Top_Rocket_Trail.ss_graph
       - SpectaclesInteractionKit/Examples/RocketWorkshop/VFX/Rocket Sparks/stripe_noise 2.png
       - SpectaclesInteractionKit/Examples/SIK Examples.prefab
-      - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
       - SpectaclesInteractionKit/Providers
@@ -649,6 +648,7 @@ CollapsedEntities:
       - Speech Recognition.lspkg/VoiceML Module.voiceMLModule
       - Speech Recognition.lspkg/package.native
       - VoiceML Module.voiceMLModule
+      - World Object Controller
       - World Object Controller/Materials
       - World Object Controller/Materials/graph_matte_shadow.mat
       - World Object Controller/Materials/ground_grid.mat
