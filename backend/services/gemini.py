@@ -3,6 +3,10 @@ import os
 from typing import List, Tuple
 from google import genai
 from google.genai import types
+import base64
+import os
+from pathlib import Path
+import tempfile
 
 load_dotenv()
 
@@ -10,19 +14,28 @@ client = genai.Client(api_key="AIzaSyDUOee4gefkOjFBawcuKNhq8SEEVljOtAQ")
 # Configure Gemini API
 #genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-async def process_audio(audio_bytes: bytes) -> str:
-    prompt = f"Please provide a transcript of the following audio"
-    response = client.models.generate_content(
-        model='gemini-2.0-flash',
-        contents=[
-            prompt,
-            types.Part.from_bytes(
-                data=audio_bytes,
-                mime_type='audio/wav',
-            )
-        ]
-    )
-    return response.text
+async def process_audio(audio) -> str:
+    try:
+        # For debugging - print the first few bytes
+        with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as temp_file:
+            content = await audio.read()
+            temp_file.write(content)
+            audio_path = temp_file.name
+            myfile = client.files.upload(file=audio_path)
+            print(f"Audio saved at: {audio_path}")
+            
+            # Seek back to start of file for later processing
+            await audio.seek(0)
+                
+        response = client.models.generate_content(
+            model="gemini-2.0-flash", contents=["Do the exact english transcription of the audio", myfile]
+        )
+
+        print(response.text)
+        
+    except Exception as e:
+        print(f"Error in process_audio: {str(e)}")
+        return f"Error transcribing audio: {str(e)}"
 
     # async def generate_summary(transcript: str) -> str:
     # prompt = f"""

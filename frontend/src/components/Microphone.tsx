@@ -142,7 +142,7 @@ const Microphone: React.FC = () => {
                     // Clear audio data
                     audioData.length = 0;
                 }
-            }, 5000);
+            }, 30000);
 
         } catch (error) {
             console.error('Error accessing microphone:', error);
@@ -178,27 +178,25 @@ const Microphone: React.FC = () => {
     const sendAudioToBackend = async (audioBlob: Blob) => {
         try {
             const formData = new FormData();
-            formData.append('audio', audioBlob);
+            // Add filename to help FastAPI recognize the file
+            const file = new File([audioBlob], "recording.wav", { type: "audio/wav" });
+            formData.append('audio', file);
 
             console.log("Sending audio to backend");
-
-            // Commented out file download for testing
-            /*
-            const url = URL.createObjectURL(audioBlob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `recording_${new Date().toISOString()}.wav`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            */
-
-            await axios.patch('https://la-hacks-project.onrender.com/api/updateInfo?snap_user_id=test_user&lecture_id=2e312afe-b903-4da3-959d-235e3e3f8fc6', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
+            
+            await axios.patch(
+                'http://localhost:8000/api/updateInfo', 
+                formData,
+                {
+                    params: {
+                        snap_user_id: 'test_user',
+                        lecture_id: '2e312afe-b903-4da3-959d-235e3e3f8fc6'
+                    },
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                }
+            );
         } catch (error) {
             console.error('Error sending audio to backend:', error);
         }
