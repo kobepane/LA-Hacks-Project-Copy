@@ -8,9 +8,50 @@ import Recorder from 'recorder-js';
 const Microphone: React.FC = () => {
     const [isRecording, setIsRecording] = useState(false);
     const [audioChunks, setAudioChunks] = useState<Blob[]>([]);
+    const [isSpeaking, setIsSpeaking] = useState(false);
+    const [isActuallySpeaking, setIsActuallySpeaking] = useState(false);
     const recorderRef = useRef<Recorder | null>(null);
     const streamRef = useRef<MediaStream | null>(null);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const analyserRef = useRef<AnalyserNode | null>(null);
+    const animationFrameRef = useRef<number | null>(null);
+    const speakingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const silenceCounterRef = useRef<number>(0);
+
+    const checkAudioLevel = () => {
+        if (!analyserRef.current) return;
+
+        const dataArray = new Uint8Array(analyserRef.current.frequencyBinCount);
+        analyserRef.current.getByteFrequencyData(dataArray);
+
+        // Calculate average volume
+        const average = dataArray.reduce((a, b) => a + b) / dataArray.length;
+
+        // Update actual speaking state based on volume threshold
+        const currentlySpeaking = average > 20; // Lowered threshold
+        setIsActuallySpeaking(currentlySpeaking);
+
+        if (currentlySpeaking) {
+            silenceCounterRef.current = 0;
+            setIsSpeaking(true);
+            if (speakingTimeoutRef.current) {
+                clearTimeout(speakingTimeoutRef.current);
+                speakingTimeoutRef.current = null;
+            }
+        } else {
+            silenceCounterRef.current++;
+            if (silenceCounterRef.current >= 10) { // Increased from 5 to 10 (about 1 second of silence)
+                if (!speakingTimeoutRef.current) {
+                    speakingTimeoutRef.current = setTimeout(() => {
+                        setIsSpeaking(false);
+                        speakingTimeoutRef.current = null;
+                    }, 1000); // Increased from 500ms to 1000ms
+                }
+            }
+        }
+
+        animationFrameRef.current = requestAnimationFrame(checkAudioLevel);
+    };
 
     const startRecording = async () => {
         try {
@@ -18,6 +59,14 @@ const Microphone: React.FC = () => {
             streamRef.current = stream;
 
             const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+
+            // Set up audio analyzer
+            const analyser = audioContext.createAnalyser();
+            analyser.fftSize = 256;
+            const source = audioContext.createMediaStreamSource(stream);
+            source.connect(analyser);
+            analyserRef.current = analyser;
+
             const recorder = new Recorder(audioContext, {
                 numChannels: 1,
                 sampleRate: 44100,
@@ -27,6 +76,7 @@ const Microphone: React.FC = () => {
             await recorder.init(stream);
             recorder.start();
             setIsRecording(true);
+            checkAudioLevel();
 
             // Send audio chunks every 5 seconds
             intervalRef.current = setInterval(async () => {
@@ -34,7 +84,7 @@ const Microphone: React.FC = () => {
                     const { buffer } = await recorderRef.current.stop();
                     const blob = new Blob([buffer], { type: 'audio/wav' });
                     setAudioChunks((prev) => [...prev, blob]);
-                    recorderRef.current.start(); // Start recording again
+                    recorderRef.current.start();
                 }
             }, 5000);
 
@@ -53,7 +103,16 @@ const Microphone: React.FC = () => {
         if (intervalRef.current) {
             clearInterval(intervalRef.current);
         }
+        if (animationFrameRef.current) {
+            cancelAnimationFrame(animationFrameRef.current);
+        }
+        if (speakingTimeoutRef.current) {
+            clearTimeout(speakingTimeoutRef.current);
+        }
         setIsRecording(false);
+        setIsSpeaking(false);
+        setIsActuallySpeaking(false);
+        silenceCounterRef.current = 0;
     };
 
     useEffect(() => {
@@ -117,7 +176,7 @@ const Microphone: React.FC = () => {
                         marginTop: 3,
                         display: 'flex',
                         gap: 2,
-                        animation: 'wave 1s infinite',
+                        animation: isSpeaking ? 'wave 1s infinite' : 'none',
                         '@keyframes wave': {
                             '0%': { transform: 'scaleY(0.5)' },
                             '50%': { transform: 'scaleY(1.5)' },
@@ -133,7 +192,7 @@ const Microphone: React.FC = () => {
                                 height: '40px',
                                 backgroundColor: '#1976d2',
                                 borderRadius: '4px',
-                                animation: `wave ${0.5 + i * 0.1}s infinite`,
+                                animation: isSpeaking ? `wave ${0.5 + i * 0.1}s infinite` : 'none',
                             }}
                         />
                     ))}
