@@ -33,7 +33,6 @@ jedi==0.19.2
 jupyter_client==8.6.3
 jupyter_core==5.7.2
 matplotlib-inline==0.1.7
-motor==3.3.2
 nest-asyncio==1.6.0
 packaging==25.0
 parso==0.8.4
@@ -50,7 +49,8 @@ pyasn1_modules==0.4.2
 pydantic==2.6.1
 pydantic_core==2.16.2
 Pygments==2.19.1
-pymongo==4.12.0
+motor==3.4.0
+pymongo==4.8.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 python-jose==3.3.0
