@@ -8,9 +8,14 @@
     - !<own> 8c1b9da2-3537-434f-a350-4d37ef42f50d
     - !<own> db9015c0-9537-49be-9f56-121f0d4d9022
     - !<own> 1a6097a5-7fa5-4fee-9083-2bda74af0325
+    - !<own> 729c7085-3790-4ad6-aee6-85be6a56bc1e
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
-      []
+      - |
+        id: 13
+        name: Layer 1
+        color: 0
+
     HasOrtho: true
   RenderOutput: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
   RenderPreviewOutput: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
@@ -325,6 +330,21 @@
   Components:
     - !<own> 4c73e60f-2eef-4c15-91be-eba22e1f121f
     - !<own> 9bf9c0a4-70ca-42c3-b5a2-c21b588129a5
+- !<SceneObject/0a0118d4-d836-402f-83a1-5f4d4fe0979a>
+  PrefabRemaps:
+    []
+  Name: AudioBufferTranscoder
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a4ea25bf-7e3a-40c0-8e07-8e7c02732b41
 - !<SceneObject/0a23c403-527e-4555-a7cf-5a32324737da>
   PrefabRemaps:
     []
@@ -697,6 +717,22 @@
   Components:
     - !<own> c771a65a-3c1d-44be-a161-d3472c51b6f8
     - !<own> 02adb89f-d691-4ef1-afa5-8fdaf1507a9b
+- !<ScriptComponent/24543ec0-fdbf-4310-977c-90075d3d90ca>
+  PrefabRemaps:
+    []
+  Name: LensController
+  Enabled: true
+  ScriptAsset: !<reference> 48849d90-fbb4-4f1b-bc1f-d24186d21aae
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      captionPlaceholder: !<reference.ScriptComponent> 024c449a-3df3-4efc-acc5-a35bed05390f
+  ScriptTypes:
+    "":
+      {}
 - !<ScreenTransform/25cdefdd-4c28-4b09-a2d6-aeb173f254f3>
   PrefabRemaps:
     []
@@ -4833,6 +4869,21 @@
     []
   Components:
     []
+- !<SceneObject/729c7085-3790-4ad6-aee6-85be6a56bc1e>
+  PrefabRemaps:
+    []
+  Name: Main Controller
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 24543ec0-fdbf-4310-977c-90075d3d90ca
 - !<SceneObject/73878f4c-6df5-46ca-b140-8df3448039cd>
   PrefabRemaps:
     []
@@ -6303,6 +6354,7 @@
     - !<own> d8375956-3862-49aa-b288-c8398d577747
     - !<own> 63ab4153-8ae1-4fe3-a392-e5d5e38b12c6
     - !<own> fc66092e-5a9a-4fe3-8af8-c1af2924bbd5
+    - !<own> 0a0118d4-d836-402f-83a1-5f4d4fe0979a
   Components:
     []
 - !<ScriptComponent/9bf9c0a4-70ca-42c3-b5a2-c21b588129a5>
@@ -6666,6 +6718,22 @@
     - !<own> d1478be3-6895-43d6-8c26-20d363707053
   Components:
     []
+- !<ScriptComponent/a4ea25bf-7e3a-40c0-8e07-8e7c02732b41>
+  PrefabRemaps:
+    []
+  Name: AudioBufferTranscoder
+  Enabled: true
+  ScriptAsset: !<reference> b14d9f45-988c-48b0-8b01-9c9a55d72da7
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/a7137186-955b-4554-9d77-df0309dab483>
   PrefabRemaps:
     []

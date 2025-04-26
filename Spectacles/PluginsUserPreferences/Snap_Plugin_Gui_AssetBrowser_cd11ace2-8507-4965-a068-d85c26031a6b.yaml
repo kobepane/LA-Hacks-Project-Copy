@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 632
+    size: 644
     values:
       - Audio Analyzer.lspkg
       - Audio Analyzer.lspkg/Audio Analyzer Resources
@@ -20,19 +20,28 @@ CollapsedEntities:
       - Audio Analyzer.lspkg/Audio Analyzer Resources/Scripts/AudioAnalyzerHelper.js
       - Audio Analyzer.lspkg/Audio_Analyzer__ADD_TO_SCENE.prefab
       - Audio Analyzer.lspkg/package.native
+      - AudioBufferTranscoder.ts
       - BasicRemoteService.ts
       - Device Camera Texture.deviceCameraTexture
+      - Easy Lens
+      - Easy Lens/Lens Components
+      - Easy Lens/Lens Components/Screen Text.lsc
+      - Easy Lens/LensController.js
       - Echopark.hdr
       - Echopark.hdr/Diffuse
       - Echopark.hdr/Specular
       - GenericHandUI.prefab
       - HandButton.ts
+      - Hint - Draw And Erase/.hidden
+      - Hint - Draw And Erase/Custom Hint Resources/Resources
+      - Hint - Draw And Erase/Custom Hint Resources/Resources/Textures
+      - Hint - Draw And Erase/Custom Hint Resources/Resources/Textures/Animated
+      - Hint - Draw And Erase/Custom Hint Resources/Resources/Textures/Animated/Hint_Draw_And_Erase
       - Hint - Draw on the Wall
       - Hint - Draw on the Wall/.hidden
       - Hint - Draw on the Wall/.hidden/SpriteGraphPreset.lsmat.mat
       - Hint - Draw on the Wall/.hidden/SpriteGraphPreset1.lsmat.ss_graph
       - Hint - Draw on the Wall/Custom Hint Resources
-      - Hint - Draw on the Wall/Custom Hint Resources/Resources
       - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures
       - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures/Animated
       - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures/Animated/Hint_Draw_On_The_Wall_3
@@ -51,6 +60,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
+      - SpectaclesInteractionKit/Assets/Materials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightLeft.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightRight.mat
@@ -122,6 +132,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/SnapGhost_Mesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/SphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Uncheck.mesh
+      - SpectaclesInteractionKit/Assets/Shaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerHighlight.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerTipGlow.ss_graph
@@ -130,6 +141,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Shaders/NormalBasedTargetOutline.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PinchButton-ActiveOrInActive.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PinchDarkRadial.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonHover.ss_graph
