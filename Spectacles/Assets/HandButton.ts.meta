@@ -27,13 +27,19 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     button: false
+    chirality: false
+    txobj: false
   ScriptTypesHidden:
     {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - button: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
+    - chirality: false
+      button: !<MappingBased.PinchButton> 00000000-0000-0000-0000-000000000000
+      txobj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input bool chirality
     - // @input PinchButton button
+    - // @input SceneObject txobj
