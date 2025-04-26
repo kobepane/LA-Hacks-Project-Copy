@@ -42,5 +42,5 @@ client = AsyncIOMotorClient(MONGODB_URL)
 database = client[DATABASE_NAME]
 
 # Collections
-lectures_collection = database.lecture-entries
-users_collection = database.user-entries 
+lectures_collection = database["lecture-entries"]
+users_collection = database["user-entries"] 
