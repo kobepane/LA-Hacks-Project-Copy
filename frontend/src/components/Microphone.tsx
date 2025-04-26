@@ -3,14 +3,12 @@ import { Button, Box } from '@mui/material';
 import MicIcon from '@mui/icons-material/Mic';
 import MicOffIcon from '@mui/icons-material/MicOff';
 import axios from 'axios';
-import Recorder from 'recorder-js';
 
 const Microphone: React.FC = () => {
     const [isRecording, setIsRecording] = useState(false);
     const [audioChunks, setAudioChunks] = useState<Blob[]>([]);
     const [isSpeaking, setIsSpeaking] = useState(false);
-    const [isActuallySpeaking, setIsActuallySpeaking] = useState(false);
-    const recorderRef = useRef<Recorder | null>(null);
+    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
     const streamRef = useRef<MediaStream | null>(null);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const analyserRef = useRef<AnalyserNode | null>(null);
@@ -27,9 +25,8 @@ const Microphone: React.FC = () => {
         // Calculate average volume
         const average = dataArray.reduce((a, b) => a + b) / dataArray.length;
 
-        // Update actual speaking state based on volume threshold
-        const currentlySpeaking = average > 20; // Lowered threshold
-        setIsActuallySpeaking(currentlySpeaking);
+        // Check if currently speaking based on volume threshold
+        const currentlySpeaking = average > 20;
 
         if (currentlySpeaking) {
             silenceCounterRef.current = 0;
@@ -40,12 +37,12 @@ const Microphone: React.FC = () => {
             }
         } else {
             silenceCounterRef.current++;
-            if (silenceCounterRef.current >= 10) { // Increased from 5 to 10 (about 1 second of silence)
+            if (silenceCounterRef.current >= 10) { // About 1 second of silence
                 if (!speakingTimeoutRef.current) {
                     speakingTimeoutRef.current = setTimeout(() => {
                         setIsSpeaking(false);
                         speakingTimeoutRef.current = null;
-                    }, 1000); // Increased from 500ms to 1000ms
+                    }, 1000);
                 }
             }
         }
@@ -53,9 +50,53 @@ const Microphone: React.FC = () => {
         animationFrameRef.current = requestAnimationFrame(checkAudioLevel);
     };
 
+    const createWavBlob = (audioData: Float32Array, sampleRate: number): Blob => {
+        const numChannels = 1;
+        const format = 1; // PCM
+        const bitDepth = 16;
+
+        const bytesPerSample = bitDepth / 8;
+        const blockAlign = numChannels * bytesPerSample;
+
+        const wavData = new Uint8Array(44 + audioData.length * 2);
+        const view = new DataView(wavData.buffer);
+
+        // Write WAV header
+        view.setUint32(0, 0x46464952, true); // "RIFF"
+        view.setUint32(4, 36 + audioData.length * 2, true); // File size
+        view.setUint32(8, 0x45564157, true); // "WAVE"
+        view.setUint32(12, 0x20746D66, true); // "fmt "
+        view.setUint32(16, 16, true); // Format chunk size
+        view.setUint16(20, format, true); // Format (PCM)
+        view.setUint16(22, numChannels, true); // Channels
+        view.setUint32(24, sampleRate, true); // Sample rate
+        view.setUint32(28, sampleRate * blockAlign, true); // Byte rate
+        view.setUint16(32, blockAlign, true); // Block align
+        view.setUint16(34, bitDepth, true); // Bits per sample
+        view.setUint32(36, 0x61746164, true); // "data"
+        view.setUint32(40, audioData.length * 2, true); // Data chunk size
+
+        // Write audio data
+        const offset = 44;
+        for (let i = 0; i < audioData.length; i++) {
+            const s = Math.max(-1, Math.min(1, audioData[i]));
+            view.setInt16(offset + i * 2, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+        }
+
+        return new Blob([wavData], { type: 'audio/wav' });
+    };
+
     const startRecording = async () => {
         try {
-            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const stream = await navigator.mediaDevices.getUserMedia({
+                audio: {
+                    sampleRate: 44100,
+                    channelCount: 1,
+                    echoCancellation: true,
+                    noiseSuppression: true,
+                    autoGainControl: true
+                }
+            });
             streamRef.current = stream;
 
             const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
@@ -67,24 +108,39 @@ const Microphone: React.FC = () => {
             source.connect(analyser);
             analyserRef.current = analyser;
 
-            const recorder = new Recorder(audioContext, {
-                numChannels: 1,
-                sampleRate: 44100,
-            });
-            recorderRef.current = recorder;
+            // Set up script processor for audio processing
+            const processor = audioContext.createScriptProcessor(4096, 1, 1);
+            const audioData: Float32Array[] = [];
 
-            await recorder.init(stream);
-            recorder.start();
+            processor.onaudioprocess = (e) => {
+                const inputData = e.inputBuffer.getChannelData(0);
+                audioData.push(new Float32Array(inputData));
+            };
+
+            source.connect(processor);
+            processor.connect(audioContext.destination);
+
             setIsRecording(true);
             checkAudioLevel();
 
             // Send audio chunks every 5 seconds
-            intervalRef.current = setInterval(async () => {
-                if (recorderRef.current) {
-                    const { buffer } = await recorderRef.current.stop();
-                    const blob = new Blob([buffer], { type: 'audio/wav' });
-                    setAudioChunks((prev) => [...prev, blob]);
-                    recorderRef.current.start();
+            intervalRef.current = setInterval(() => {
+                if (audioData.length > 0) {
+                    // Concatenate all audio data
+                    const totalLength = audioData.reduce((acc, arr) => acc + arr.length, 0);
+                    const concatenated = new Float32Array(totalLength);
+                    let offset = 0;
+                    audioData.forEach(arr => {
+                        concatenated.set(arr, offset);
+                        offset += arr.length;
+                    });
+
+                    // Create WAV blob
+                    const wavBlob = createWavBlob(concatenated, audioContext.sampleRate);
+                    setAudioChunks((prev) => [...prev, wavBlob]);
+
+                    // Clear audio data
+                    audioData.length = 0;
                 }
             }, 5000);
 
@@ -94,9 +150,6 @@ const Microphone: React.FC = () => {
     };
 
     const stopRecording = async () => {
-        if (recorderRef.current) {
-            await recorderRef.current.stop();
-        }
         if (streamRef.current) {
             streamRef.current.getTracks().forEach(track => track.stop());
         }
@@ -111,13 +164,12 @@ const Microphone: React.FC = () => {
         }
         setIsRecording(false);
         setIsSpeaking(false);
-        setIsActuallySpeaking(false);
         silenceCounterRef.current = 0;
     };
 
     useEffect(() => {
         if (audioChunks.length > 0) {
-            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+            const audioBlob = audioChunks[0]; // We're only sending one chunk at a time
             sendAudioToBackend(audioBlob);
             setAudioChunks([]);
         }
@@ -129,6 +181,18 @@ const Microphone: React.FC = () => {
             formData.append('audio', audioBlob);
 
             console.log("Sending audio to backend");
+
+            // Commented out file download for testing
+            /*
+            const url = URL.createObjectURL(audioBlob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `recording_${new Date().toISOString()}.wav`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            */
 
             await axios.patch('https://la-hacks-project.onrender.com/api/updateInfo?snap_user_id=test_user&lecture_id=2e312afe-b903-4da3-959d-235e3e3f8fc6', formData, {
                 headers: {
