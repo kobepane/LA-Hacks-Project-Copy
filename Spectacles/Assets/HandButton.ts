@@ -34,7 +34,7 @@ export class HandButton extends BaseScriptComponent {
       // Copy TRS of the scene object to the world coordinates of the hand
       transform.setWorldRotation(handTransform.getWorldRotation());
       transform.setWorldPosition(
-        this.leftHand
+        this.hand
           .getPalmCenter()
           .add(handTransform.back.uniformScale(5))
           .add(handTransform.left.uniformScale(3))
