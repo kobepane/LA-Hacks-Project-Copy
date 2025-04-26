@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 627
+    size: 632
     values:
       - Audio Analyzer.lspkg
       - Audio Analyzer.lspkg/Audio Analyzer Resources
@@ -27,17 +27,30 @@ CollapsedEntities:
       - Echopark.hdr/Specular
       - GenericHandUI.prefab
       - HandButton.ts
+      - Hint - Draw on the Wall
+      - Hint - Draw on the Wall/.hidden
+      - Hint - Draw on the Wall/.hidden/SpriteGraphPreset.lsmat.mat
+      - Hint - Draw on the Wall/.hidden/SpriteGraphPreset1.lsmat.ss_graph
+      - Hint - Draw on the Wall/Custom Hint Resources
+      - Hint - Draw on the Wall/Custom Hint Resources/Resources
+      - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures
+      - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures/Animated
+      - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures/Animated/Hint_Draw_On_The_Wall_3
+      - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures/Animated/Hint_Draw_On_The_Wall_3/Hint_Draw_On_The_Wall_3.lensanim
+      - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures/Animated/Hint_Draw_On_The_Wall_3/Hint_Draw_On_The_Wall_3.lensanim/HAND_LPD-299_Draw_on_the_Wall_v03.png
+      - Hint - Draw on the Wall/Custom Hint Resources/Resources/Textures/Animated/Hint_Draw_On_The_Wall_3/Hint_Draw_On_The_Wall_3.lensanim/Hint_Draw_On_The_Wall_3
+      - Hint - Draw on the Wall/Custom Hint Resources/Scripts
+      - Hint - Draw on the Wall/Custom Hint Resources/Scripts/CustomHint.js
+      - Hint - Draw on the Wall/Hint - Draw on the Wall.prefab
       - Microphone Audio.micaudio
+      - Remote Service Module.remoteServiceModule
       - Render Target.renderTarget
       - Scene.scene
       - Script.js
-      - SpectaclesInteractionKit
-      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
-      - SpectaclesInteractionKit/Assets/Materials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightLeft.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightRight.mat
@@ -55,12 +68,10 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnDefault.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnIcon.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnSelect.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonHover.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonIdle_Masked.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonHover.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonIdle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowIdle.mat
@@ -70,7 +81,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButton_Idle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollBackground.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonHover.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonIdle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/Slider_Platform.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/StateButtonToggledHover.mat
@@ -112,7 +122,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/SnapGhost_Mesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/SphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Uncheck.mesh
-      - SpectaclesInteractionKit/Assets/Shaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerHighlight.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerTipGlow.ss_graph
@@ -121,12 +130,9 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Shaders/NormalBasedTargetOutline.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PinchButton-ActiveOrInActive.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PinchDarkRadial.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonHover.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonIdle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonHover.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonIdle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowIdle.ss_graph
@@ -136,7 +142,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButton_Idle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollBackground.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonHover.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonIdle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/Slider_Platform.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/StateButtonToggledHover.ss_graph

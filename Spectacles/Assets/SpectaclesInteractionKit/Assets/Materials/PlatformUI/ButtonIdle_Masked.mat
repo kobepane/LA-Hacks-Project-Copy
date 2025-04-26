@@ -1,8 +1,8 @@
-- !<Material/ae1edd4c-2264-4a6b-b498-167da1bccc69>
+- !<Material/fc7fb094-0ea4-4145-8dae-a1fb9a04b456>
   PackagePath: ""
   PassesInfo:
-    - !<own> d727422e-c0c9-4ce4-a7f6-60d59b8e2082
-- !<PassInfo/d727422e-c0c9-4ce4-a7f6-60d59b8e2082>
+    - !<own> 96e71047-8374-48f7-ba87-66bb5a385622
+- !<PassInfo/96e71047-8374-48f7-ba87-66bb5a385622>
   CachedProperties:
     - Port_Center_N026:
         typeIdx: 3
@@ -525,7 +525,7 @@
     icon:
       typeIdx: 9
       value:
-        id: f131280d-b7ec-461a-82c9-e0e91db19cfb
+        id: 823eeef2-0431-4aa6-894a-1b8debedb253
         sampler:
           filteringMode: Trilinear
           wrapModeU: ClampToBorderColor

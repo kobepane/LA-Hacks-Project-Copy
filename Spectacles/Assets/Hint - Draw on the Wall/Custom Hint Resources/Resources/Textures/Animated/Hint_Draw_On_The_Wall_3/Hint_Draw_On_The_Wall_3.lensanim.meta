@@ -1,0 +1,30 @@
+- !<AssetImportMetadata/26bd1b04-04d7-4c46-9223-8c807a5f83fb>
+  ImportedAssetIds:
+    AnimatedTexture: !<reference> a54285f5-0e1e-4569-9839-aaceab93d108
+    HAND_LPD-299_Draw_on_the_Wall_v03.png: !<reference> f023ddcc-76ed-44b3-8480-49d036bb7b42
+  ImporterName: LensAnimationImporter
+  PrimaryAsset: !<reference> a54285f5-0e1e-4569-9839-aaceab93d108
+  PackageType: LegacyPackage
+  PackagePolicy: CannotBeUnpackedTransparent
+  ExtraData:
+    AssetLibraryId: 1lBaKEQSroRrAWo7v3tphb
+  AssetDataMap:
+    AnimatedTexture: !<own> 016d05bf-2e5b-435b-bb55-9dbc0feee3ab
+  DependentFiles:
+    - HAND_LPD-299_Draw_on_the_Wall_v03.png
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AnimatedTextureData/016d05bf-2e5b-435b-bb55-9dbc0feee3ab>
+  AutoPlay: false
+  Reversed: false
+  PingPong: false
+  CurrentSequence: HAND_LPD-299_Draw_on_the_Wall_v03
+  KeyFramesData:
+    HAND_LPD-299_Draw_on_the_Wall_v03:
+      - time: 0.000000
+        value: 0
+      - time: 3.933333
+        value: 59

@@ -1,0 +1,245 @@
+- !<AssetImportMetadata/61c57d14-9b34-482b-86ce-eaf65e2f9c0f>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> d646202b-4436-4d15-a06d-7b0af7690526
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> d646202b-4436-4d15-a06d-7b0af7690526
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    AssetLibraryId: 1lBaKEQSroRrAWo7v3tphb
+  AssetDataMap:
+    ObjectPrefab: !<own> 4b0ef3d2-afe6-48a6-91fa-d86389dba8be
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefab/05ce0d1a-3fc5-4430-b665-05ddaf487867>
+  PackagePath: ""
+  objects:
+    - !<own> 7ef991e4-7c96-414e-b94f-af7ed97c5549
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/19461412-3b5d-4fb4-819b-6397f4e45b15>
+  PrefabRemaps:
+    []
+  Name: CustomHint
+  Enabled: true
+  ScriptAsset: !<reference> e2f46655-c5a2-4379-bb29-48ed75d1cf82
+  ScriptInputsDefault:
+    hintType: true
+    text: true
+    mesh: true
+    appearDelay: true
+    repeatCount: true
+    advanced: true
+    tweenPrintDebugLog: true
+    disableHiding: true
+    hideIfCapture: true
+    hideOnCamSwitch: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      hintType: image
+      text: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      image: !<reference.Image> 897be890-b6a1-477f-b619-77a15f9a07f5
+      mesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      camera: 2
+      appearDelay: !<float> 0.000000
+      appearDuration: !<float> 0.000000
+      screenDuration: !<float> 5.000000
+      disappearDuration: 0.300000
+      repeatCount: 3
+      advanced: false
+      tweenPrintDebugLog: false
+      disableHiding: false
+      showOnce: true
+      hideIfCapture: true
+      hideOnCamSwitch: true
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/2fe98adc-fced-40ec-b92c-cb809211a6fb>
+  PrefabRemaps:
+    []
+  Name: Hint_-_Draw_on_the_Wall_Curve__PLACE_IN_ORTHO_CAM
+  Enabled: true
+  Layers: 1048576
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d51b6c24-1250-4bfd-93f8-fdbc5e0fb3b0
+  Components:
+    - !<own> 44204bdc-6713-4d74-8c89-3deb035faa71
+    - !<own> 7b27db75-6104-4607-9a50-ee590aa545c4
+- !<ScreenRegionComponent/44204bdc-6713-4d74-8c89-3deb035faa71>
+  PrefabRemaps:
+    []
+  Name: Screen Region
+  Enabled: true
+  ScreenRegionType: FullFrame
+  ResizeWithKeyboard: false
+- !<ObjectPrefabAssetData/4b0ef3d2-afe6-48a6-91fa-d86389dba8be>
+  SourceRemaps:
+    - 0c9780f2-abfd-44d8-82f6-80cb1af94967: 897be890-b6a1-477f-b619-77a15f9a07f5
+    - 2a314d6d-e3a6-42f7-9d7d-ba3586d47f5b: 44204bdc-6713-4d74-8c89-3deb035faa71
+    - 48cada08-f0b6-4dbb-a3c3-b7d9470fac79: 7ef991e4-7c96-414e-b94f-af7ed97c5549
+    - 923043af-77c5-45e8-8880-1a8844994953: d51b6c24-1250-4bfd-93f8-fdbc5e0fb3b0
+    - a078d0fc-fd99-46ef-8253-13bad551430b: 8b4c31f0-d1c3-432c-bb83-b618d2fb0ed6
+    - a6508cce-ad86-402c-ad2d-6a063ef03284: 19461412-3b5d-4fb4-819b-6397f4e45b15
+    - c305eaab-7684-4349-9d30-0ecc57f934d5: 7b27db75-6104-4607-9a50-ee590aa545c4
+    - d646202b-4436-4d15-a06d-7b0af7690526: 05ce0d1a-3fc5-4430-b665-05ddaf487867
+    - e54f78f7-0725-486d-97df-bbaafd2628ff: 2fe98adc-fced-40ec-b92c-cb809211a6fb
+    - f21b68d6-3c1b-4e70-9c1f-321e879d2c57: ccd3d5f6-6dff-4d44-9613-bc9bf6e12c52
+  SourceState: !<own> 05ce0d1a-3fc5-4430-b665-05ddaf487867
+- !<ScreenTransform/7b27db75-6104-4607-9a50-ee590aa545c4>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<SceneObject/7ef991e4-7c96-414e-b94f-af7ed97c5549>
+  PrefabRemaps:
+    []
+  Name: Orthographic Camera
+  Enabled: true
+  Layers: 1048576
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2fe98adc-fced-40ec-b92c-cb809211a6fb
+  Components:
+    - !<own> 8b4c31f0-d1c3-432c-bb83-b618d2fb0ed6
+- !<Image/897be890-b6a1-477f-b619-77a15f9a07f5>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 30
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3c74681c-70de-4842-80b0-7c6639ce7175
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<Camera/8b4c31f0-d1c3-432c-bb83-b618d2fb0ed6>
+  PrefabRemaps:
+    []
+  Name: Camera
+  Enabled: true
+  renderLayer: 1048576
+  MipmapLevel: 0
+  RenderOrder: 2
+  Size: 20.000000
+  Near: 1.000000
+  Far: 200.000000
+  Fov: 60.000004
+  ClearColor: !<CameraClearColor>
+    Mode: None
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  ClearDepth: !<CameraClearDepth>
+    Mode: Value
+    Value: 1.000000
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Aspect: 1.000000
+  CameraType: Orthographic
+  DepthMode: Regular
+  DeviceProperty: All
+  AspectPreset: Custom
+  OitLayers: NoOit
+  RenderTarget: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
+  DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScreenTransform/ccd3d5f6-6dff-4d44-9613-bc9bf6e12c52>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.683171, y: 0.419371, z: -80.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -0.479199
+    bottom: -0.214593
+    right: 0.733033
+    top: 0.298467
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<SceneObject/d51b6c24-1250-4bfd-93f8-fdbc5e0fb3b0>
+  PrefabRemaps:
+    []
+  Name: Draw On The Wall 3
+  Enabled: true
+  Layers: 1048576
+  LocalTransform:
+    position: {x: 0.683171, y: 0.419371, z: -80.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ccd3d5f6-6dff-4d44-9613-bc9bf6e12c52
+    - !<own> 19461412-3b5d-4fb4-819b-6397f4e45b15
+    - !<own> 897be890-b6a1-477f-b619-77a15f9a07f5

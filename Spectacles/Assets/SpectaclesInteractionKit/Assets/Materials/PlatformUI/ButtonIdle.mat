@@ -4,6 +4,390 @@
     - !<own> dd2aee48-5687-45c9-86e6-f6209860f58b
 - !<PassInfo/dd2aee48-5687-45c9-86e6-f6209860f58b>
   CachedProperties:
+    - Port_Center_N026:
+        typeIdx: 3
+        value: {x: 0.500000, y: 0.500000}
+    - Port_Column0_N026:
+        typeIdx: 5
+        value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Column1_N026:
+        typeIdx: 5
+        value: {x: 0.000000, y: 1.000000, z: 0.000000, w: 0.000000}
+    - Port_Column2_N026:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 1.000000, w: 0.000000}
+    - Port_Column3_N026:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_Column3_N048:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Column3_N201:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_CoordsIn_N026:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Dimension_N026:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Import_N033:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_Import_N055:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Import_N069:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Import_N070:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Import_N071:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Import_N078:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Import_N079:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input0_N014:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N021:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N024:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N026:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N027:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N028:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N031:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N032:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N033:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N034:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input0_N036:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input0_N037:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input0_N038:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N039:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N040:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N041:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N042:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N043:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N045:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N054:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input0_N055:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N060:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N063:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N065:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N067:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N074:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N075:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N077:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N080:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N083:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Input0_N084:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N085:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N014:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Input1_N021:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N034:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N036:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N037:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N038:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N039:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N040:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input1_N041:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N042:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N043:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N044:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N045:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N047:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N054:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input1_N055:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N056:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N060:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N061:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N063:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N064:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N065:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N066:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N067:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input1_N084:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input1_N085:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Input2_N021:
+        typeIdx: 5
+        value: {x: 0.500008, y: 0.500008, z: 0.500008, w: 0.500008}
+    - Port_Input_N074:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input_N086:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input_N087:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N030:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N057:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Position0_N007:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Position0_N018:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Position3_N007:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Position4_N018:
+        typeIdx: 1
+        value: 1.000000
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RotationAngle_N026:
+        typeIdx: 1
+        value: 0.000000
+    - Port_RotationAngle_N048:
+        typeIdx: 1
+        value: 0.000000
+    - Port_RotationAngle_N201:
+        typeIdx: 1
+        value: 0.000000
+    - Port_RotationAxis_N026:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RotationAxis_N048:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RotationAxis_N201:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RotationXYZ_N026:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RotationXYZ_N048:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_RotationXYZ_N201:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Rotation_N026:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value1_N072:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value1_N074:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value1_N082:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value2_N072:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value2_N074:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value2_N082:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N023:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N072:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N074:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value3_N082:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N023:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N072:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N074:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N082:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N142:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N156:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value4_N200:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Value_N035:
+        typeIdx: 1
+        value: 0.500000
+    - Port_Value_N037:
+        typeIdx: 1
+        value: 0.500000
+    - Port_Value_N038:
+        typeIdx: 1
+        value: 0.500000
+    - Port_Value_N072:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Value_N073:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Value_N081:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Value_N089:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_WorldNormal_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
     - additional_settings_btn_refl_texBorderColor:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -48,6 +432,9 @@
     Port_Input1_N009:
       typeIdx: 3
       value: {x: 1.000000, y: 1.000000}
+    Port_Input1_N024:
+      typeIdx: 1
+      value: 0.000000
     Port_Input1_N053:
       typeIdx: 1
       value: 0.500000
@@ -57,6 +444,9 @@
     Port_Input2_N009:
       typeIdx: 3
       value: {x: -0.500000, y: -0.500000}
+    Port_Input2_N024:
+      typeIdx: 1
+      value: 1.000000
     Port_Input2_N053:
       typeIdx: 1
       value: 0.500000
@@ -105,6 +495,9 @@
     Port_Value4_N018:
       typeIdx: 1
       value: 1.000000
+    Port_Value_N022:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.000000}
     PreviewEnabled:
       typeIdx: 0
       value: 0
